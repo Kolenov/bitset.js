@@ -34,14 +34,14 @@ describe('stateful-component.js', function() {
     it('Returns true if state includes given bitmask', function() {
       // TODO: Check if it's okay to assert on value without comparing to true
       // *I bet yes
-      assert(states.hasState(0x01 | 0x02, 0x01) === true);
-      assert(states.hasState(0xFF, 0x04) === true);
+      assert(states.hasState(0x01 | 0x02, 0x01));
+      assert(states.hasState(0xFF, 0x04));
     });
 
     it('Returns false if state doesn\'t include given bitmask', function() {
-      assert(states.hasState(0x02, 0x01) === false);
-      assert(states.hasState(0x04, 0x02) === false);
-      assert(states.hasState(0x00, 0xFF) === false);
+      assert(!states.hasState(0x02, 0x01));
+      assert(!states.hasState(0x04, 0x02));
+      assert(!states.hasState(0x00, 0xFF));
     });
   });
 
@@ -50,8 +50,8 @@ describe('stateful-component.js', function() {
       assert(states.addState(0x00, 0x01) === 0x01);
       assert(states.addState(0x00, 0x02) === 0x02);
       assert(states.addState(0x01, 0x04) === 0x05);
-      assert(states.hasState(states.addState(0x01, 0x04), 0x01) === true);
-      assert(states.hasState(states.addState(0x01, 0x04), 0x04) === true);
+      assert(states.hasState(states.addState(0x01, 0x04), 0x01));
+      assert(states.hasState(states.addState(0x01, 0x04), 0x04));
     });
 
     it('Adds multiple states', function() {
