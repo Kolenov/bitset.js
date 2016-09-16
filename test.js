@@ -18,15 +18,7 @@ describe('stateful-component.js', function() {
         return state[key];
       });
 
-      // TODO: Replace IIFE with map on cleanKeys or even static values
-      assert.sameMembers(stateValues, (function(size) {
-        var powersOfTwo = [];
-        for (var i = 0; i < size; i++) {
-          powersOfTwo.push(Math.pow(2, i));
-        }
-
-        return powersOfTwo;
-      })(cleanKeys.length));
+      assert.sameMembers(stateValues, [0x01, 0x02, 0x04, 0x08]);
     });
 
     it('Appends shortcuts to accessing all and none states', function() {
