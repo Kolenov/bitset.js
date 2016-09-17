@@ -1,2 +1,3 @@
-# bitset
-Tiny library to work with bitsets in JavaScript
+# bitset.js
+Tiny library for work with bit sets in JS
+
