@@ -1,15 +1,21 @@
 {
-  "name": "bitset",
-  "version": "0.0.1",
+  "name": "@htmlacademy/bitset",
+  "version": "0.1.0",
   "description": "Functions to work with bitsets in JavaScript",
-  "main": "src/index.js",
+  "author": "Igor Alexeenko <igor.alexeenko@htmlacademy.ru>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htmlacademy/bitset.js.git"
+  },
   "scripts": {
     "test": "mocha test.js"
   },
-  "author": "Igor Alexeenko (igor.alexeenko@htmlacademy.ru)",
-  "license": "ISC",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
-  }
+  },
+  "engines": {
+    "node": ">=4.5"
+  },
+  "license": "MIT"
 }

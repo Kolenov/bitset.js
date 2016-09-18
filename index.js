@@ -10,17 +10,18 @@ module.exports = {
    * Returns an object with given values as keys and corresponding powers of two
    * as values. Also adds two shortcut states which allows to add, remove
    * or check all existing states
-   * @param {...string} var_names
+   * @param {...string} names
    * @return {Object.<string, number>}
    */
-  getStateObject: function(var_names) {
-    var names = [].slice.call(arguments, 0);
+  getStateObject: function(names) {
     var objToExport = {
       'NONE': 0x00,
       'ALL': 0xFF
     };
 
-    names.forEach(function (name, i) {
+    names = [].slice.call(arguments, 0);
+
+    names.forEach(function(name, i) {
       objToExport[name] = Math.pow(2, i);
     });
 
@@ -32,17 +33,17 @@ module.exports = {
    * @param {number} state
    * @return {boolean}
    */
-  hasState: function (componentState, state) {
+  hasState: function(componentState, state) {
     return Boolean(componentState & state);
   },
 
   /**
    * @param {number} currentState
-   * @param {...number} var_stateToAdd
+   * @param {...number} stateToAdd
    * @return {number}
    */
-  addState: function (currentState, var_stateToAdd) {
-    return [].slice.call(arguments, 1).reduce(function (prevState, state) {
+  addState: function (currentState, stateToAdd) {
+    return [].slice.call(arguments, 1).reduce(function(prevState, state) {
       return prevState | state;
     }, currentState);
   },
@@ -52,7 +53,7 @@ module.exports = {
    * @param {number} stateToDelete
    * @return {number}
    */
-  deleteState: function (currentState, stateToDelete) {
+  deleteState: function(currentState, stateToDelete) {
     return currentState & ~stateToDelete;
   },
 
@@ -61,7 +62,7 @@ module.exports = {
    * @param {number} stateToSwitch
    * @return {number}
    */
-  toggleState: function (currentState, stateToSwitch) {
+  toggleState: function(currentState, stateToSwitch) {
     return currentState ^ stateToSwitch;
   }
 };
