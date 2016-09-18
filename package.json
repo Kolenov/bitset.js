@@ -14,5 +14,8 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
   },
+  "engines": {
+    "node": ">=4.5"
+  },
   "license": "MIT"
 }
