@@ -28,8 +28,8 @@ _TBD_
 
 The MIT License, see the included `LICENSE` file.
 
-[npm-image]: https://img.shields.io/npm/v/@htmlacademy/bitset.js.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/@htmlacademy/bitset.js
+[npm-image]: https://img.shields.io/npm/v/@htmlacademy/bitset.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/@htmlacademy/bitset
 [travis-image]: https://travis-ci.org/htmlacademy/bitset.js.svg?branch=master
 [travis-url]: https://travis-ci.org/htmlacademy/bitset.js
 [devdependency-image]: https://david-dm.org/htmlacademy/bitset.js/dev-status.svg?style=flat-square
