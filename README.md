@@ -14,6 +14,11 @@ $ npm i --save @htmlacademy/bitset
 
 ## Examples
 
+_TBD_
+
+## API
+
+_TBD_
 
 ## Author
 
