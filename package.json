@@ -1,6 +1,6 @@
 {
   "name": "@htmlacademy/bitset",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Functions to work with bitsets in JavaScript",
   "author": "Igor Alexeenko <igor.alexeenko@htmlacademy.ru>",
   "repository": {
