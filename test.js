@@ -6,7 +6,7 @@
 var assert = require('chai').assert;
 var bitset = require('./index');
 
-describe('stateful-component.js', function() {
+describe('bitset.js', function() {
   describe('getStateObject', function() {
     it('Creates an object contained all enlisted states as keys and powers of 2 as values', function() {
       var state = bitset.getStateObject('FIRST', 'SECOND', 'THIRD', 'FOURTH');
@@ -32,8 +32,6 @@ describe('stateful-component.js', function() {
 
   describe('hasState', function() {
     it('Returns true if state includes given bitmask', function() {
-      // TODO: Check if it's okay to assert on value without comparing to true
-      // *I bet yes
       assert(bitset.hasState(0x01 | 0x02, 0x01));
       assert(bitset.hasState(0xFF, 0x04));
     });
